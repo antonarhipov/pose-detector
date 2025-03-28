@@ -1,0 +1,43 @@
+.resolution-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.resolution-controls label {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.resolution-select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.resolution-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.resolution-select:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+@media (prefers-color-scheme: light) {
+  .resolution-select {
+    background-color: #e2e8f0;
+    border-color: #cbd5e0;
+    color: #1a202c;
+  }
+  
+  .resolution-select:focus {
+    border-color: #4f46e5;
+  }
+}

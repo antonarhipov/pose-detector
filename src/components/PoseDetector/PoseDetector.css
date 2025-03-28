@@ -68,6 +68,18 @@
   gap: 0.25rem;
   font-size: 0.9rem;
   cursor: pointer;
+  margin-right: 0.75rem;
+}
+
+.performance-stats {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: #4caf50;
 }
 
 .visualization-controls input[type="checkbox"] {
@@ -90,7 +102,9 @@
   height: 100%;
 }
 
-.pose-detector-error {
+.pose-detector-error,
+.pose-detector-error-message,
+.pose-detector-loading-message {
   position: absolute;
   top: 0;
   left: 0;
@@ -104,6 +118,13 @@
   text-align: center;
   padding: 1rem;
   z-index: 20;
+}
+
+.pose-detector-error-message .error-message,
+.pose-detector-loading-message .error-message {
+  max-width: 90%;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pose-detector-stats {

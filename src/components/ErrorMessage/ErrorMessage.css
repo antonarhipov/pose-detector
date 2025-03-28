@@ -1,0 +1,136 @@
+.error-message {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin: 1rem 0;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+.error-message-header {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.error-message-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.error-message-body {
+  padding: 1rem;
+  background-color: white;
+}
+
+.error-message-text {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.error-message-suggestion {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.error-message-actions {
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f5f5f5;
+}
+
+.error-message-retry {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Error type styles */
+.error-message-error {
+  border: 1px solid #ffcdd2;
+}
+
+.error-message-error .error-message-header {
+  background-color: #f44336;
+  color: white;
+}
+
+.error-message-error .error-message-retry {
+  background-color: #f44336;
+  color: white;
+}
+
+.error-message-error .error-message-retry:hover {
+  background-color: #d32f2f;
+}
+
+/* Warning type styles */
+.error-message-warning {
+  border: 1px solid #ffe0b2;
+}
+
+.error-message-warning .error-message-header {
+  background-color: #ff9800;
+  color: white;
+}
+
+.error-message-warning .error-message-retry {
+  background-color: #ff9800;
+  color: white;
+}
+
+.error-message-warning .error-message-retry:hover {
+  background-color: #f57c00;
+}
+
+/* Info type styles */
+.error-message-info {
+  border: 1px solid #bbdefb;
+}
+
+.error-message-info .error-message-header {
+  background-color: #2196f3;
+  color: white;
+}
+
+.error-message-info .error-message-retry {
+  background-color: #2196f3;
+  color: white;
+}
+
+.error-message-info .error-message-retry:hover {
+  background-color: #1976d2;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .error-message-body {
+    background-color: #333;
+    color: #eee;
+  }
+  
+  .error-message-actions {
+    background-color: #222;
+  }
+  
+  .error-message-error {
+    border-color: #5c3636;
+  }
+  
+  .error-message-warning {
+    border-color: #5c4836;
+  }
+  
+  .error-message-info {
+    border-color: #364f5c;
+  }
+}

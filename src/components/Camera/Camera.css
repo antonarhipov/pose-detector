@@ -86,7 +86,9 @@
 }
 
 .camera-error,
-.camera-loading {
+.camera-loading,
+.camera-error-message,
+.camera-loading-message {
   position: absolute;
   top: 0;
   left: 0;
@@ -99,10 +101,18 @@
   color: #fff;
   text-align: center;
   padding: 1rem;
+  z-index: 10;
 }
 
 .camera-error {
   color: #fc8181;
+}
+
+.camera-error-message .error-message,
+.camera-loading-message .error-message {
+  max-width: 90%;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import PoseDetector from './components/PoseDetector/PoseDetector';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
         <p>A web-based application for real-time human pose detection.</p>
       </header>
       <main>
-        <PoseDetector width={640} height={480} />
+        <ErrorBoundary>
+          <PoseDetector width={640} height={480} />
+        </ErrorBoundary>
       </main>
     </div>
   );
