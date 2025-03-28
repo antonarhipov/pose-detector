@@ -1,0 +1,150 @@
+.pose-detector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pose-detector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.pose-detector-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.pose-detector-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.detection-toggle {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.detection-toggle:hover:not(:disabled) {
+  background-color: #3a3a3a;
+}
+
+.detection-toggle.active {
+  background-color: #4caf50;
+}
+
+.detection-toggle.active:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.detection-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.visualization-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.visualization-controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.visualization-controls input[type="checkbox"] {
+  margin: 0;
+}
+
+.pose-detector-view {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #000;
+  margin-bottom: 1rem;
+}
+
+.pose-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pose-detector-error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fc8181;
+  text-align: center;
+  padding: 1rem;
+  z-index: 20;
+}
+
+.pose-detector-stats {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.pose-detector-stats p {
+  margin: 0.25rem 0;
+}
+
+@media (prefers-color-scheme: light) {
+  .pose-detector-container {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .detection-toggle {
+    background-color: #e2e8f0;
+    border-color: #cbd5e0;
+    color: #1a202c;
+  }
+
+  .detection-toggle:hover:not(:disabled) {
+    background-color: #cbd5e0;
+  }
+
+  .detection-toggle.active {
+    background-color: #48bb78;
+    color: white;
+  }
+
+  .detection-toggle.active:hover:not(:disabled) {
+    background-color: #38a169;
+  }
+
+  .pose-detector-stats {
+    background-color: #e2e8f0;
+    color: #1a202c;
+  }
+}

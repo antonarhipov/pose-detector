@@ -1,0 +1,1 @@
+The *.md files in `docs/` directory contain the requirements for the application. Follow the development plan to implement the application
